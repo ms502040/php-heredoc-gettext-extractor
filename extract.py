@@ -110,7 +110,7 @@ def main():
     This is what ties it all together.
     """
     php_files = sys.argv[1:]
-    output_file = "hd_messages.po"
+    output_file = "/tmp/hd_messages.po"
     messages = []
     
     if DEBUG:
