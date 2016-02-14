@@ -125,6 +125,11 @@ def main():
     messages = list(set(messages))
     
     file_handle = open(output_file, 'w')
+    
+    file_handle.write("msgid \"\"\n")
+    file_handle.write("msgstr \"\"\n")
+    file_handle.write("\"Content-Type: text/plain; charset=UTF-8\\n\"\n")
+    
     for message in messages:
         if DEBUG:
             print(output_message_lines(message))
