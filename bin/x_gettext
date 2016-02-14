@@ -1,0 +1,11 @@
+#!/bin/sh
+
+
+out_file=$1
+shift 1
+
+extract.py $@
+
+xgettext --language=PHP --force-po -o $out_file --from-code=UTF-8 -k_ -kgettext $@
+
+msgcat --force-po -o "$out_file" "$out_file" "/tmp/hd_messages.po"
